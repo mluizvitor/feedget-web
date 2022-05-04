@@ -42,8 +42,7 @@ export function WidgetForm() {
   }
 
   return (
-    <div className='bg-zinc-900 p-4 relative flex flex-col items-center rounded-2xl mb-4
-      w-[calc(100vw-3rem)] md:w-auto'>
+    <div className='widget-body'>
 
       {feedbackSent ? (
         <FeedbackSuccessStep onFeedbackRestartRequested={handleRestartFeedback} />
@@ -56,11 +55,10 @@ export function WidgetForm() {
             onFeedbackSent={() => setFeedbackSent(true)} />
       )}
 
-      <footer className='text-xs text-neutral-400'>
+      <footer className='widget-footer-text'>
         {'Feito com ❤️ por '}
-        <a className='underline underline-offset-2 rounded-sm
-        focus:outline-brand-color focus:outline-none'
-        href='https://github.com/mluizvitor'>{'Vitor Monteiro'}</a>
+        <a className='widget-footer-anchor'
+          href='https://github.com/mluizvitor'>{'Vitor Monteiro'}</a>
       </footer>      
     </div>
   );

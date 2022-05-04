@@ -9,20 +9,17 @@ export function FeedbackTypeStep({onFeedbackTypeChanged} : FeedbackTypeStepProps
   return (
     <>
       <header>
-        <span className='text-xl leading-6' >{'Deixe seu feedback'}</span>
+        <span className='widget-header-title' >{'Deixe seu feedback'}</span>
         <CloseButton />
       </header>
 
-      <div className='flex py-8 gap-2 w-full'>
+      <div className='widget-type-canvas'>
         {Object.entries(feedbackTypes).map(([key, value]) => {
           return (
             <button key={key}
               onClick={() => onFeedbackTypeChanged(key as FeedbackType)}
               type='button'
-              className='bg-zinc-800 hover:border-brand-color focus:border-brand-color focus:outline-none
-            transition-colors py-5 w-24 flex-1 rounded-lg
-            flex flex-col items-center gap-2
-            border-2 border-transparent'>
+              className='widget-type-button'>
               <img src={value.image.source}
                 alt={value.image.alt} />
               <span>

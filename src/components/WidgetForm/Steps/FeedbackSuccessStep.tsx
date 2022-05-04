@@ -12,17 +12,15 @@ export function FeedbackSuccessStep({onFeedbackRestartRequested}: FeedbackSucces
         <CloseButton />
       </header>
 
-      <div className='flex flex-col items-center py-10 w-[304px]'>
+      <div className='widget-success-canvas'>
         <img src={successImage}
           alt='Imagem de um quadrado verde com cantos arredondados. No centro há um símbolo branco no formato de verificado/check' />
 
-        <span className='text-xl mt-4'>{'Agradecemos o feedback!'}</span>
+        <span className='widget-success-title'>{'Agradecemos o feedback!'}</span>
 
         <button type='button'
           onClick={onFeedbackRestartRequested}
-          className='py-2 px-6 rounded-md mt-6 bg-zinc-800 hover:bg-zinc-700
-          border-transparent transition-colors text-sm leading-6 
-          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-color'>
+          className='widget-success-send-new'>
           {'Quero enviar outro'}
         </button>
       </div>
