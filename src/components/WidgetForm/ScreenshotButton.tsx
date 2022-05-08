@@ -30,8 +30,9 @@ export function ScreenshotButton({screenshot, onScreenshotTook}: ScreenshotButto
         className='screenshot-button-remove'
         style={{
           backgroundImage: `url(${screenshot})`,
-          backgroundPosition: 'right bottom',
-          backgroundSize: 180,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
         }}>
         <Trash weight='fill'
           className='w-4 h-4'/>
