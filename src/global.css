@@ -5,7 +5,8 @@
 body {
   @apply
   bg-light-app dark:bg-dark-app 
-  text-light-text-primary dark:text-dark-text-primary;
+  text-light-text-primary dark:text-dark-text-primary
+  transition-colors;
 }
 
 @layer components {
