@@ -25,7 +25,7 @@ body {
 
 @layer components {
   .feedback-popover-canvas {
-    @apply absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end shadow-lg;
+    @apply fixed bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end shadow-lg;
   }
   .feedback-popover-trigger {
     @apply rounded-full px-3 h-12 flex items-center

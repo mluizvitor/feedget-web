@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
+        'script': ['Great Vibes', 'serif'],
       },
       colors: {
         brand: {
