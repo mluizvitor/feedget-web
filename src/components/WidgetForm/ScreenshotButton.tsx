@@ -44,7 +44,13 @@ export function ScreenshotButton({screenshot, onScreenshotTook}: ScreenshotButto
     <button type='button'
       onClick={handleTakeScreenshot}
       className='screenshot-button-take'>
-      {isTakingScreenshot ? <Loading/> : <Camera className='w-6 h-6 text-zinc-100'/>}
+      {
+        isTakingScreenshot
+          ?
+          <Loading/>
+          :
+          <Camera className='w-6 h-6 text-zinc-100'/>
+      }
     </button>
   );
 }
