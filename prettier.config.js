@@ -1,5 +1,3 @@
-module.exports = {
-  singleQuote: true,
-  trailingComma: 'all',
-  allowParens: 'avoid',
-};
+export const singleQuote = true;
+export const trailingComma = 'all';
+export const allowParens = 'avoid';
