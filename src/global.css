@@ -3,34 +3,38 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#09090A] text-zinc-100;
+  @apply
+  bg-light-app dark:bg-dark-app 
+  text-light-text-primary dark:text-dark-text-primary;
 }
 
 @layer components {
   .screenshot-button-take {
     @apply p-2 rounded-md border-transparent
-    bg-zinc-800 hover:bg-zinc-700 transition-colors
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-hover;
+    bg-light-surface-secondary dark:bg-dark-surface-secondary
+    hover:bg-light-surface-secondary-hover dark:hover:bg-dark-surface-secondary-hover transition-colors
+    focus:outline-none focus:ring-2 focus:ring-offset-2 
+    focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover;
   }
 
   .screenshot-button-remove {
     @apply p-1 w-10 h-10 rounded-md flex items-end justify-end border-transparent
-    text-zinc-400 hover:text-zinc-100 transition-colors 
-    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-hover;
+    text-light-text-secondary hover:text-light-text-primary
+    dark:text-dark-text-secondary dark:hover:text-dark-text-primary transition-colors 
+    focus:outline-none focus:ring-2 focus:ring-offset-2
+    focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover;
   }
-}
-
-@layer components {
 }
 
 @layer components {
   .feedback-popover-canvas {
-    @apply fixed bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end shadow-lg;
+    @apply fixed bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end;
   }
   .feedback-popover-trigger {
     @apply rounded-full px-3 h-12 flex items-center
-    bg-brand-color hover:bg-brand-hover text-brand-onBrand transition-colors shadow-brandShadow
-      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-hover;
+    bg-brand-color hover:bg-brand-hover text-brand-on-brand transition-colors shadow-brand-shadow
+      focus:outline-none focus:ring-2 focus:ring-offset-2 
+      focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover;
   }
 
   .feedback-popover-trigger-label {
@@ -40,13 +44,13 @@ body {
 
 @layer components {
   .widget-body {
-    @apply bg-zinc-900 relative
+    @apply bg-light-surface-primary dark:bg-dark-surface-primary relative
       flex flex-col items-center rounded-2xl
-      mb-4 p-4 md:w-auto w-[calc(100vw-3rem)];
+      mb-4 p-4 md:w-auto w-[calc(100vw-3rem)] shadow-2xl;
   }
 
   .widget-footer-text {
-    @apply text-xs text-neutral-400;
+    @apply text-xs text-light-text-secondary dark:text-dark-text-secondary;
   }
 
   .widget-footer-anchor {
@@ -69,9 +73,11 @@ body {
   .header-button {
     @apply w-8 h-8 absolute
       rounded-full flex items-center justify-center
-      text-zinc-400 hover:text-zinc-100
-      hover:bg-black hover:bg-opacity-20
-      focus:outline-brand-hover focus:outline-none focus:text-zinc-100;
+      text-light-text-secondary hover:text-light-text-primary
+      dark:text-dark-text-secondary dark:hover:text-dark-text-primary
+      hover:bg-black hover:bg-opacity-10
+      focus:outline-brand-hover focus:outline-none
+      focus:text-light-text-primary dark:focus:text-dark-text-primary;
   }
 }
 
@@ -87,7 +93,8 @@ body {
   }
 
   .widget-type-button {
-    @apply bg-zinc-800 hover:border-brand-color focus:border-brand-color focus:outline-none
+    @apply bg-light-surface-secondary dark:bg-dark-surface-secondary
+      hover:border-brand-color focus:border-brand-color focus:outline-none
       transition-colors py-5 w-24 flex-1 rounded-lg
       flex flex-col items-center gap-2
       border-2 border-transparent;
@@ -100,16 +107,19 @@ body {
   }
 
   .widget-content-textarea {
-    @apply min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 bg-transparent
-      border-[1px] border-zinc-600 rounded-md px-3 py-2
+    @apply min-w-[304px] w-full min-h-[112px] text-sm
+    placeholder-light-text-secondary dark:placeholder-dark-text-secondary
+    text-light-text-primary dark:text-dark-text-primary bg-transparent
+      border-[1px] border-light-stroke dark:border-dark-stroke rounded-md px-3 py-2
       focus:border-brand-color focus:outline-none focus:ring-brand-hover focus:ring-1 resize-none
-      scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin;
+      scrollbar-thumb-light-stroke dark:scrollbar-thumb-dark-stroke scrollbar-track-transparent scrollbar-thin;
   }
 
   .widget-content-send-feedback {
-    @apply p-2 bg-brand-color text-brand-onBrand rounded-md border-transparent
+    @apply p-2 bg-brand-color text-brand-on-brand rounded-md border-transparent
       flex-1 flex justify-center items-center text-sm hover:bg-brand-hover
-      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-hover
+      focus:outline-none focus:ring-2 focus:ring-offset-2
+      focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover
       transition-colors disabled:opacity-50 disabled:hover:bg-brand-color;
   }
 
@@ -128,8 +138,11 @@ body {
   }
 
   .widget-success-send-new {
-    @apply py-2 px-6 rounded-md mt-6 bg-zinc-800 hover:bg-zinc-700
+    @apply py-2 px-6 rounded-md mt-6
+    bg-light-surface-secondary hover:bg-light-surface-secondary-hover
+    dark:bg-dark-surface-secondary dark:hover:bg-dark-surface-secondary-hover
       border-transparent transition-colors text-sm leading-6 
-      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-color;
+      focus:outline-none focus:ring-2 focus:ring-offset-2 
+      focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-color;
   }
 }

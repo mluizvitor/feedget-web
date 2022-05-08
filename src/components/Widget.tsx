@@ -11,7 +11,7 @@ export function Widget() {
   }
 
   return (
-    <Popover className='feedback-popover-canvas'>
+    <Popover className='feedback-popover-canvas z-[10]'>
       <Popover.Panel>
         <WidgetForm />
       </Popover.Panel>

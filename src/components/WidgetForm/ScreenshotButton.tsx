@@ -49,7 +49,7 @@ export function ScreenshotButton({screenshot, onScreenshotTook}: ScreenshotButto
           ?
           <Loading/>
           :
-          <Camera className='w-6 h-6 text-zinc-100'/>
+          <Camera className='w-6 h-6'/>
       }
     </button>
   );

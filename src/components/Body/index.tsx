@@ -4,8 +4,8 @@ import typefaceBugy from '../../assets/bugy/typeface.png';
 export function Body() {
 
   return (
-    <main className='pt-[120px] pb-[calc(32px+32px+48px)] px-6 max-w-[calc(24px+24px+1120px)] mx-auto'>
-      <div className='bg-zinc-900 py-6 px-8 sm:py-12 sm:px-14 rounded-lg text-zinc-400 mb-8'>
+    <main className='pt-[120px] pb-[calc(32px+32px+48px)] px-6 max-w-[calc(24px+24px+1120px)] mx-auto opacity-50'>
+      <div className='py-6 px-8 sm:py-12 sm:px-14 rounded-lg mb-8 text-light-text-secondary dark:text-dark-text-secondary bg-light-surface-primary dark:bg-dark-surface-primary'>
         <span>
           {'Experimente enviar um feedback de um '}
           <em>
@@ -21,14 +21,14 @@ export function Body() {
             return (
               <>
                 <div
-                  className='bg-zinc-900 w-full rounded-lg mr-3'>
+                  className='w-full rounded-lg mr-3 text-light-text-primary dark:text-dark-text-primary bg-light-surface-primary dark:bg-dark-surface-primary'>
                   <img src={imageBugy}
                     alt='Bugy Image Placement' 
                     className='ml-6 mt-[11px]' />
                   <span className='px-6 py-6 block font-script text-2xl'>{'Bugy Image Placement'}</span>
                 </div>
 
-                <div className='bg-zinc-900 w-full rounded-lg'>
+                <div className='w-full rounded-lg text-light-text-primary dark:text-dark-text-primary bg-light-surface-primary dark:bg-dark-surface-primary'>
                   <img src={typefaceBugy}
                     alt='Bugy Typeface'
                     className='ml-6 mt-[11px]' />
