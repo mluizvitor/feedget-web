@@ -1,8 +1,19 @@
 import { Switch } from '@headlessui/react';
-import { Moon, Sun } from 'phosphor-react';
+import { GithubLogo, Moon, SignOut, Sun } from 'phosphor-react';
 import { useEffect, useState } from 'react';
+import { api } from '../../services/api';
+
+interface UserProps {
+  id: number,
+  email: string,
+  login: string,
+  name: string,
+  avatar_url: string,
+}
 
 export function Header() {
+  const [user, setUser] = useState<UserProps | null>(null);
+
   const [darkThemeActive, setDarkThemeActive] = useState(() => {
     const config = localStorage.getItem('@feedget:datkTheme');
 
@@ -33,6 +44,28 @@ export function Header() {
     return;
   }
 
+  async function handleLogout() {
+    await api.get('/api/logout')
+      .then(() => {
+        setUser(null);
+      });
+
+    ;
+  }
+
+  useEffect(() => {
+    async function loadUser() {
+
+      const usr = await api.get('/api/me', { 
+        withCredentials: true,
+      }).then(res => res.data);
+
+      setUser(usr);
+    }
+
+    loadUser();
+  }, []);
+
   useEffect(() => {
     localStorage.setItem('@feedget:datkTheme', JSON.stringify(darkThemeActive));
   }, [darkThemeActive]);
@@ -61,7 +94,33 @@ export function Header() {
           }
         </nav>
 
-        <div className='flex items-center'>
+        <div className='flex items-center gap-4'>
+
+          {!user
+            ?
+            <a role='button'
+              className='h-10 bg-brand-color text-brand-on-brand rounded-md flex items-center px-3 gap-2'
+              href={`https://github.com/login/oauth/authorize?client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID}&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}&path=/&scope=user:email`}>
+              <GithubLogo size={24} />
+              {'Entrar'}
+            </a>
+
+            :
+            <button onClick={handleLogout}
+              className='h-10 flex items-center bg-light-surface-secondary-hover dark:bg-dark-surface-secondary-hover rounded-full p-1 pr-2 gap-2'>
+              <div className='h-8 w-8 rounded-full overflow-hidden'>
+                <img src={user.avatar_url}
+                  className='h-auto w-auto'/>
+              </div>
+  
+              <span className='hidden sm:block'>{user.login}</span>
+
+              <SignOut size={24} />
+
+            </button>
+
+          }
+
           <Switch
             id='darkThemeSwitcher'
             checked={darkThemeActive}
