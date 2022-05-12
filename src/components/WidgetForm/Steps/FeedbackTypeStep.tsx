@@ -21,7 +21,8 @@ export function FeedbackTypeStep({onFeedbackTypeChanged} : FeedbackTypeStepProps
               type='button'
               className='widget-type-button'>
               <img src={value.image.source}
-                alt={value.image.alt} />
+                alt={value.image.alt}
+                className='w-10 h-10'/>
               <span>
                 {value.title}
               </span>
