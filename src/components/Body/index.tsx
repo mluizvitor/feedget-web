@@ -1,4 +1,4 @@
-import homeImage from '../../assets/home.webp';
+import happyImage from '../../assets/home/happy.webp';
 
 export function Body() {
   return (
