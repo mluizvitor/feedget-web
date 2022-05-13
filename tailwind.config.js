@@ -9,6 +9,11 @@ module.exports = {
         'script': ['Great Vibes', 'serif'],
       },
       colors: {
+        aux: {
+          pink: '#E56ACB',
+          'pink-dark': '#89407A',
+          'brand-dark': '#4E3489',
+        },
         brand: {
           color: '#8257E5',
           hover: '#996DFF',
