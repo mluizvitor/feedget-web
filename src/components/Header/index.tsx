@@ -5,7 +5,7 @@ import { Link, animateScroll } from 'react-scroll';
 
 export function Header() {
   const [darkThemeActive, setDarkThemeActive] = useState(() => {
-    const config = localStorage.getItem('@feedget:datkTheme');
+    const config = localStorage.getItem('@feedget:darkTheme');
 
     if(config) {
       const parseConfig: boolean = JSON.parse(config);
@@ -35,7 +35,7 @@ export function Header() {
   }
 
   useEffect(() => {
-    localStorage.setItem('@feedget:datkTheme', JSON.stringify(darkThemeActive));
+    localStorage.setItem('@feedget:darkTheme', JSON.stringify(darkThemeActive));
   }, [darkThemeActive]);
 
   return (
