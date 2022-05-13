@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+
   @apply
   bg-light-app dark:bg-dark-app 
   text-light-text-primary dark:text-dark-text-primary
@@ -145,5 +146,24 @@ body {
       border-transparent transition-colors text-sm leading-6 
       focus:outline-none focus:ring-2 focus:ring-offset-2 
       focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-color;
+  }
+}
+
+@layer components {
+  .landing-p {
+    @apply text-lg md:text-xl leading-[150%] font-normal;
+  };
+
+  .landing-h1 {
+    @apply text-3xl md:text-4xl leading-[150%] font-black block;
+  }
+  .landing-h2 {
+    @apply text-2xl md:text-3xl leading-[150%] font-medium block;
+  }
+}
+
+@layer components {
+  .landing-inner-section {
+    @apply w-full max-w-[1120px] mx-auto flex gap-16;
   }
 }
