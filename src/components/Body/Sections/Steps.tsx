@@ -19,7 +19,7 @@ const steps: StepsProps[] = [
   },
   {
     title: 'Passo 2',
-    body: 'E então escolher que tipo de feedback deseja enviar',
+    body: 'E então escolher que tipo de feedback deseja fazer',
     image: step02Img,
     imageAlt: 'Interface do widget. Mostra três botões para escolher a categoria do feedback.',
   },
@@ -31,7 +31,7 @@ const steps: StepsProps[] = [
   },
   {
     title: 'Passo 4',
-    body: 'Depois de terminar, você pode enviar mais feedbacks se precisar',
+    body: 'Depois de terminar, você pode enviar mais feedbacks´',
     image: step04Img,
     imageAlt: 'Interface de conclusão do envio. Mostra um texto de sucesso e um botão para realizar um novo feedback.',
   }
@@ -42,7 +42,7 @@ export function Steps() {
     <section className='px-6 py-[96px]'>
       <div className='landing-inner-section flex-col'>
         
-        <strong className='landing-h1 text-center flex-1'>
+        <strong className='landing-h1 text-center flex-1 mb-16'>
           {'Quer ver como é fácil?'}
         </strong>
 
@@ -51,14 +51,14 @@ export function Steps() {
           {steps.map((step, i) => {
             return (
               <div key={i}>
-                <div className='overflow-hidden rounded-xl bg-brand-color bg-opacity-50'>
+                <div className='overflow-hidden rounded-xl bg-aux-pink bg-opacity-40'>
                   <img src={step.image}
                     alt={step.imageAlt}
                     className='max-h-[320px] mx-auto' />
                 </div>
 
                 <div className='p-6 text-md leading-[150%]'>
-                  <strong className='text-xl leading-[150%] font-medium mb-2'>{step.title}</strong>
+                  <strong className='text-xl leading-[150%] font-medium mb-2 block'>{step.title}</strong>
                   <p>{step.body}</p>
                 </div>
               </div>

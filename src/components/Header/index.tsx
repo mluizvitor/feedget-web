@@ -39,9 +39,8 @@ export function Header() {
   }, [darkThemeActive]);
 
   return (
-    <header className='bg-light-surface-primary dark:bg-dark-surface-secondary shadow-md h-[64px] md:h-[72px] px-6 py-3 flex fixed w-full justify-center gap-8 z-[16]'>
-      <div className='max-w-[1120px] flex flex-1 items-center justify-between gap-6'>
-        
+    <header className='bg-light-surface-primary dark:bg-dark-surface-secondary shadow-md h-[64px] md:h-[72px] px-6 py-3 flex fixed w-full justify-center z-[16]'>
+      <div className='max-w-[1120px] flex flex-1 items-center justify-between'>
         <Link to=''
           onClick={animateScroll.scrollToTop}
           smooth={true}
@@ -58,12 +57,13 @@ export function Header() {
           </svg>
         </Link>
 
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center'>
           <a href='https://github.com/mluizvitor/feedget-web'
             target= '_blank'
             rel='noreferrer noopener'
-            className='flex gap-4 bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
-            <GithubLogo size={24} />
+            className='mr-4 flex bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
+            <GithubLogo size={24}
+              className='md:mr-2'/>
             <span className='hidden md:inline'>
               {'Feedget no Github'}
             </span> 
@@ -72,10 +72,11 @@ export function Header() {
           <a href='https://linkedin.com/in/mluizvitor/'
             target= '_blank'
             rel='noreferrer noopener'
-            className='flex gap-4 bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
-            <LinkedinLogo size={24} />
+            className='flex mr-4 bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
+            <LinkedinLogo size={24}
+              className='md:mr-2'/>
             <span className='hidden md:inline'>
-              {'Vitor Monteiro no LinkedIn'}
+              {'Vitor no LinkedIn'}
             </span>
           </a>
           <Switch
@@ -84,7 +85,9 @@ export function Header() {
             onChange={darkActivator}
             className={`${
               darkThemeActive ? 'bg-brand-color' : 'bg-light-surface-secondary-hover'
-            } relative inline-flex h-8 w-[48px] md:h-9 md:w-[64px] items-center rounded-full`}>
+            } relative inline-flex h-8 w-[48px] md:h-9 md:w-[64px] items-center rounded-full
+            focus:outline-none focus:ring-2 focus:ring-offset-2 
+      focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover`}>
             <span className='sr-only'>{'Tema escuro'}</span>
             <span
               className={`${

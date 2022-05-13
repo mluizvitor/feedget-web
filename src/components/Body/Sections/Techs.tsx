@@ -1,36 +1,14 @@
 import {SiExpress, SiNodedotjs, SiPostgresql, SiRailway, SiReact, SiTailwindcss, SiTypescript, SiVercel} from 'react-icons/si';
-import { GenIcon, IconType } from 'react-icons';
 
-interface TechsProps {
-  icon?: IconType;
-  label: string
-}
-
-const techs: TechsProps[] = [
-  {
-    label: 'ReactJS',
-  },
-  { 
-    label: 'Typescript',
-  },
-  {
-    label: 'Tailwind',
-  },
-  {
-    label: 'Vercel',
-  },
-  {
-    label: 'Node.JS',
-  },
-  {
-    label: 'Express',
-  },
-  {
-    label: 'PostgreSQL',
-  },
-  {
-    label: 'Railway',
-  }
+const techs = [
+  'ReactJS',
+  'Typescript',
+  'Tailwind',
+  'Vercel',
+  'Node.JS',
+  'Express',
+  'PostgreSQL',
+  'Railway'
 ];
 
 function renderIcons(data: number) {
@@ -74,18 +52,18 @@ export function Techs() {
           <strong className='landing-h1 text-center flex-1 mb-8'>
             {'Poderoso desde o nascimento'}
           </strong>
-          <p className='landing-p text-center flex-1'>
+          <p className='landing-p text-center flex-1 mb-8'>
             {'Feedget foi construído com as seguintes tecnologias'}
           </p>
         </div>
 
-        <div className='flex flex-row gap-4 md:gap-8 flex-wrap justify-center'>
+        <div className='flex flex-row flex-wrap justify-center mr-[-1rem] mb-[-1rem] md:mr-[-2rem] md:mb-[-2rem]'>
           {techs.map((tech, index) => {
             return (
               <div key={index}
-                className='h-12 px-4 md:h-14 md:px-6 border-2 border-dashed border-brand-color rounded-full flex items-center gap-4'>
+                className='h-12 px-4 md:h-14 md:px-6 border-2 border-dashed border-brand-color rounded-full flex items-center mr-4 mb-4 md:mr-8 md:mb-8'>
                 {renderIcons(index)}
-                <span className='font-medium text-md md:text-xl'>{tech.label}</span>
+                <span className='font-medium text-md md:text-xl ml-4'>{tech}</span>
               </div>
             );
           })}
