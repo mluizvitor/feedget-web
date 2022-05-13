@@ -57,11 +57,11 @@ export function Techs() {
           </p>
         </div>
 
-        <div className='flex flex-row flex-wrap justify-center mr-[-1rem] mb-[-1rem] md:mr-[-2rem] md:mb-[-2rem]'>
+        <div className='flex flex-row flex-wrap justify-center'>
           {techs.map((tech, index) => {
             return (
               <div key={index}
-                className='h-12 px-4 md:h-14 md:px-6 border-2 border-dashed border-brand-color rounded-full flex items-center mr-4 mb-4 md:mr-8 md:mb-8'>
+                className='h-12 px-4 md:h-14 md:px-6 border-2 border-dashed border-brand-color rounded-full flex items-center mx-2 my-2 md:mx-4 md:my-4'>
                 {renderIcons(index)}
                 <span className='font-medium text-md md:text-xl ml-4'>{tech}</span>
               </div>
