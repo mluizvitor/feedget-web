@@ -12,7 +12,7 @@ export function Links() {
         <a href='https://github.com/mluizvitor/feedget-web'
           target= '_blank'
           rel='noreferrer noopener'
-          className='h-14 flex bg-brand-color text-brand-on-brand font-medium px-6 rounded-full items-center'>
+          className='header-bar-button h-14 m-0 bg-brand-color dark:bg-brand-color text-brand-on-brand dark:text-brand-on-brand'>
           <GithubLogo size={24} 
             className='mr-4' />
           {'Feedget no Github'}
@@ -25,7 +25,7 @@ export function Links() {
         <a href='https://linkedin.com/in/mluizvitor/'
           target= '_blank'
           rel='noreferrer noopener'
-          className='h-14 flex bg-brand-color text-brand-on-brand font-medium px-6 rounded-full items-center'>
+          className='header-bar-button h-14 m-0 bg-brand-color dark:bg-brand-color text-brand-on-brand dark:text-brand-on-brand'>
           <LinkedinLogo size={24}
             className='mr-4' />
           {'Vitor Monteiro no LinkedIn'}

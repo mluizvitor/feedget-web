@@ -61,7 +61,7 @@ export function Header() {
           <a href='https://github.com/mluizvitor/feedget-web'
             target= '_blank'
             rel='noreferrer noopener'
-            className='mr-4 flex bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
+            className='header-bar-button'>
             <GithubLogo size={24}
               className='md:mr-2'/>
             <span className='hidden md:inline'>
@@ -72,7 +72,7 @@ export function Header() {
           <a href='https://linkedin.com/in/mluizvitor/'
             target= '_blank'
             rel='noreferrer noopener'
-            className='flex mr-4 bg-light-surface-secondary text-light-text-primary dark:bg-dark-surface-secondary-hover dark:text-dark-text-primary font-medium px-2 py-2 md:px-6 md:py-3 rounded-full items-center cursor-pointer'>
+            className='header-bar-button'>
             <LinkedinLogo size={24}
               className='md:mr-2'/>
             <span className='hidden md:inline'>
@@ -87,7 +87,7 @@ export function Header() {
               darkThemeActive ? 'bg-brand-color' : 'bg-light-surface-secondary-hover'
             } relative inline-flex h-8 w-[48px] md:h-9 md:w-[64px] items-center rounded-full
             focus:outline-none focus:ring-2 focus:ring-offset-2 
-      focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover`}>
+          focus:ring-offset-light-surface-primary dark:focus:ring-offset-dark-surface-primary focus:ring-brand-hover`}>
             <span className='sr-only'>{'Tema escuro'}</span>
             <span
               className={`${

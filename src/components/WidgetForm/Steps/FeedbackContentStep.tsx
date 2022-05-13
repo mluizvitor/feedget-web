@@ -53,7 +53,7 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, o
         <span className='widget-header-title' >
           <img src={feedbackTypeInfo.image.source}
             alt={feedbackTypeInfo.image.alt}
-            className='w-6 h-6'/>
+            className='w-6 h-6 mr-2'/>
           {feedbackTypeInfo.title}
         </span>
 
@@ -73,7 +73,7 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, o
 
           <button type='submit'
             disabled={comment.length === 0 || isSendingFeedback}
-            className='widget-content-send-feedback'>
+            className='widget-content-send-feedback ml-2'>
 
             {isSendingFeedback
               ? 
