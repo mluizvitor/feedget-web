@@ -43,7 +43,7 @@ export function Brief() {
         briefItems.map((brief, index) => {
           return (
             <div key={index}
-              className={`${brief.invertOrder ? 'md:flex-row-reverse' : 'md:flex-row'} mb-16 md:mb-24 last:mb-0 flex landing-inner-section flex-col items-center`}>
+              className={`${brief.invertOrder ? 'md:flex-row-reverse' : 'md:flex-row'} mb-16 last:mb-0 flex landing-inner-section flex-col items-center`}>
               <div className={`${brief.imageColoredBg && 'bg-brand-color bg-opacity-50'} max-w-[80%] md:max-w-[200px] md:min-w-[300px] overflow-hidden rounded-xl mb-8 md:mb-0`}>
                 <img src={brief.image}
                   alt={brief.imageAlt}
