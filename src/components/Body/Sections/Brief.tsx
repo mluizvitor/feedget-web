@@ -44,7 +44,7 @@ export function Brief() {
           return (
             <div key={index}
               className={`${brief.invertOrder ? 'md:flex-row-reverse' : 'md:flex-row'} flex landing-inner-section flex-col items-center`}>
-              <div className={`${brief.imageColoredBg && 'bg-brand-color bg-opacity-50'} max-w-[80%] md:max-w-[200px] sm:min-w-[300px] overflow-hidden rounded-xl`}>
+              <div className={`${brief.imageColoredBg && 'bg-brand-color bg-opacity-50'} max-w-[80%] md:max-w-[200px] md:min-w-[300px] overflow-hidden rounded-xl`}>
                 <img src={brief.image}
                   alt={brief.imageAlt}
                   className='mx-auto'/>
